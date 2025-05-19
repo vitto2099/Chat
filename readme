@@ -1,0 +1,4 @@
+npm init -y
+npm install express ws
+npm start
+node server.js

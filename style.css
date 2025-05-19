@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+}
+
+.chat-header {
+    background-color: #4a90e2;
+    color: white;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+}
+
+.chat-header h1 {
+    font-size: 1.5rem;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message {
+    padding: 10px 15px;
+    border-radius: 18px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.message .username {
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.message .timestamp {
+    font-size: 0.7rem;
+    color: #888;
+    margin-top: 2px;
+}
+
+.message.user {
+    align-self: flex-end;
+    background-color: #4a90e2;
+    color: white;
+}
+
+.message.other {
+    align-self: flex-start;
+    background-color: #e9e9eb;
+    color: #333;
+}
+
+.message.system {
+    align-self: center;
+    background-color: #f8f8f8;
+    color: #888;
+    font-style: italic;
+    border: 1px solid #eee;
+}
+
+.chat-input-container {
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid #eee;
+}
+
+#username, #messageInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+#username {
+    max-width: 120px;
+}
+
+#sendButton {
+    padding: 10px 15px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#sendButton:hover {
+    background-color: #3a80d2;
+}
+
+#sendButton:active {
+    background-color: #2a70c2;
+}
+
+.connection-status {
+    padding: 5px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #888;
+    background-color: #f8f8f8;
+    border-radius: 0 0 8px 8px;
+}
+
+.connection-status.connected {
+    color: #28a745;
+}
+
+.connection-status.connecting {
+    color: #ffc107;
+}
+
+.connection-status.disconnected {
+    color: #dc3545;
+}
