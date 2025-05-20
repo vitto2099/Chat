@@ -1,4 +1,8 @@
 npm init -y
 npm install express ws
 npm start
+
+rodar com o live server mas adicionar ip da maquina como host 
+exemplo (http://192.168.10.241:5500/index.html)
+
 node server.js

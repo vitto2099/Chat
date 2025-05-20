@@ -22,7 +22,7 @@ wss.on('connection', (ws) => {
   // Enviar mensagem de boas-vindas
   ws.send(JSON.stringify({
     type: 'system',
-    message: 'Bem-vindo ao chat!',
+    message: 'Bem-vindo ao chat!!!',
     timestamp: new Date().toISOString()
   }));
 
